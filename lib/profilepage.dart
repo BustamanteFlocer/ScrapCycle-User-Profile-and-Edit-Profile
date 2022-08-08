@@ -44,20 +44,16 @@ class ProfilePage extends StatelessWidget {
       body: Stack(
         alignment: Alignment.center,
         children: [
-                
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
-           
             children: [
-              
               Container(
-                height: 530,
+                height: 510,
                 width: double.infinity,
                 margin: const EdgeInsets.symmetric(horizontal: 10),
-              
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                  
                       const SizedBox(
                       height: 55,
                       width: double.infinity,
@@ -68,26 +64,19 @@ class ProfilePage extends StatelessWidget {
                               fontSize: 23,
                               color: Colors.black,
                             ),
-                          
                           ),
-                          
-                        ),  
-                           
+                        ),
                     ),
-                    
-                 
                     textfield(
                       hintText: 'Username',
                     ),
                     textfield(
                       hintText: 'Email',
                     ),
-                 
-                     SizedBox(
+                    /* const SizedBox(
                       height: 55,
                       width: double.infinity,
-                      
-                        child: const Center(
+                        child: Center(
                           child: Text(
                             "Update",
                             style: TextStyle(
@@ -96,7 +85,6 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                      
                     ),
                     SizedBox(
                       height: 55,
@@ -113,7 +101,7 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
+                    )*/
                   ],
                 ),
               )
@@ -131,12 +119,11 @@ class ProfilePage extends StatelessWidget {
             children: [
               const Padding(
                 padding: EdgeInsets.all(10),
-                
               ),
               Container(
                 padding: const EdgeInsets.all(10.0),
-                width: MediaQuery.of(context).size.width / 2,
-                height: MediaQuery.of(context).size.width / 2,
+                width: MediaQuery.of(context).size.width / 2.5,
+                height: MediaQuery.of(context).size.width / 2.5,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.white, width: 5),
                   shape: BoxShape.circle,
@@ -151,7 +138,7 @@ class ProfilePage extends StatelessWidget {
           ),
           //Edit button
           Padding(
-            padding: const EdgeInsets.only(bottom: 380, left: 184),
+            padding: const EdgeInsets.only(bottom: 450, left: 150),
             child: CircleAvatar(
               backgroundColor: Colors.black54,
               child: IconButton(
@@ -167,20 +154,17 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
-}
-
-class HeaderCurvedContainer extends CustomPainter {
+}class HeaderCurvedContainer extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()..color = const Color.fromARGB(167, 5, 143, 40); 
     Path path = Path()
       ..relativeLineTo(0, 60)
-      ..quadraticBezierTo(size.width / 2, 180, size.width, 60)
+      ..quadraticBezierTo(size.width / 2, 150, size.width, 60)
       ..relativeLineTo(0, -60)
       ..close();
     canvas.drawPath(path, paint);
   }
-
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
