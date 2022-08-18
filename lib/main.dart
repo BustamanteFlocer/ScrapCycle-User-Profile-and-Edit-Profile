@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Profile Ui',
+      title: 'ScrapCycle Profile',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
