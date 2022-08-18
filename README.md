@@ -1,6 +1,6 @@
 # profile
 
-A new Flutter project.
+ScrapCycle User Profile and Edit Profile Page
 
 ## Getting Started
 
